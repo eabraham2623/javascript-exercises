@@ -2,6 +2,8 @@
 
 const removeFromArray = function(arr, ...args) {
     let result = arr.filter (
+        // if element in list does not equal argument
+        // keep it there
         function(el) {
             return el != args;
         }
