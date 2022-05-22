@@ -1,3 +1,5 @@
+// a = initial/previous value 
+// b = current value
 const add = function(a, b) {
 	return a + b;
 };
@@ -8,12 +10,8 @@ const subtract = function(a,b) {
 
 const sum = function(arr) {
   
-  let currentTotal = 0;
-  for (let i = 0; i < arr.length; i++)
-  {
-    currentTotal = add(currentTotal, arr[i]);
-  }
-  return currentTotal;
+  let finalTotal = arr.reduce(add, 0);
+  return finalTotal;
 };
 
 const multiply = function(arr) {
